@@ -20,9 +20,9 @@ export default function BasicTable() {
         <Table aria-label="simple table" className="Table">
           <TableHead>
             <TableRow>
-              <TableCell className="TableHeader"><Checkbox/></TableCell>     
+              <TableCell className="TableHeader" align="center"><Checkbox/></TableCell>     
               {headerRows.map(headerRow => 
-                <TableCell key={headerRow} className="TableHeader">{headerRow}</TableCell>)}
+                <TableCell key={headerRow} className="TableHeader" align="center">{headerRow}</TableCell>)}
             </TableRow>
           </TableHead>
 
@@ -31,12 +31,12 @@ export default function BasicTable() {
             {tasks.map((row) => (
               <TableRow key={row.id} className="TableRow">
                 <TableCell align="center" className="TableCell"><Checkbox/></TableCell>
-                <TableCell className="TableCell">{row.name}</TableCell>
-                <TableCell className="TableCell">{row.lob}</TableCell>
-                <TableCell className="TableCell">{row.subtasks}</TableCell>
-                <TableCell className="TableCell"><input/></TableCell>
-                <TableCell className="TableCell">{row.step}</TableCell>
-                <TableCell className="TableCell">{row.dueDate}</TableCell>
+                <TableCell align="center" className="TableCell">{row.name}</TableCell>
+                <TableCell align="center" className="TableCell">{row.lob}</TableCell>
+                <TableCell align="center" className="TableCell">{row.subtasks}</TableCell>
+                <TableCell align="center" className="TableCell"><input/></TableCell>
+                <TableCell align="center" className="TableCell">{row.step}</TableCell>
+                <TableCell align="center" className="TableCell">{row.dueDate}</TableCell>
               </TableRow>
             ))}
           </TableBody>
