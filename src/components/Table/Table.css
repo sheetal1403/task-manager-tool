@@ -1,0 +1,21 @@
+.Table{
+    background-color: #ECF5FA;
+    border-collapse: separate !important;
+    border-spacing: 0 7px !important;
+    
+}
+
+.MuiTableCell-root.TableHeader{
+    border: 1px solid gray;
+    border-right: none;
+    background-color: white;
+    padding: 7px;
+}
+
+.TableRow{
+    background-color: white;
+}
+
+.MuiTableCell-root.TableCell {
+    padding: 7px;
+}
