@@ -8,16 +8,15 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Checkbox from '@material-ui/core/Checkbox';
 
-import { tasks } from '../../tasksData';
 import './Table.css';
 
-export default function BasicTable() {
+export default function TasksTable(props) {
 
     const headerRows = ['TASK NAME', 'LOB', 'SUBTASKS', 'ASSIGNED TO', 'STEP', 'DUE DATE'];
   
     return (
       <TableContainer component={Paper}>
-        <Table aria-label="simple table" className="Table">
+        <Table aria-label="tasks table" className="Table">
           <TableHead>
             <TableRow>
               <TableCell className="TableHeader" align="center"><Checkbox/></TableCell>     
@@ -28,7 +27,7 @@ export default function BasicTable() {
 
 
           <TableBody>
-            {tasks.map((row) => (
+            {props.tasks.map((row) => (
               <TableRow key={row.id} className="TableRow">
                 <TableCell align="center" className="TableCell"><Checkbox/></TableCell>
                 <TableCell align="center" className="TableCell">{row.name}</TableCell>
