@@ -1,0 +1,25 @@
+.Lob{
+    border-radius: 20px;
+    margin: 0 15px;
+    color: white;
+    font-size: 10px;
+    text-transform: uppercase;
+    background-color: violet;
+    padding: 5px 7px;
+}
+
+.Medicare{
+    background-color: #684999;
+}
+
+.Commercial{
+    background-color: #707683;
+}
+
+.Exchange{
+    background-color: #F4AF64;
+}
+
+.Medcaid{
+    background-color: #F89090;
+}

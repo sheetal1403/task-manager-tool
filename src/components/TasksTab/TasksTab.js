@@ -3,6 +3,8 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
 
+import './TasksTab.css';
+
 export default function SimpleTabs(props) {
   const [value, setValue] = React.useState(0);
 
@@ -13,10 +15,10 @@ export default function SimpleTabs(props) {
 
   return (
     <div>
-        <Tabs value={value} onChange={handleChange} aria-label="tasks tab">
-          <Tab label="Unassigned tasks" />
-          <Tab label="Assigned tasks" />
-          <Tab label="All tasks" />
+        <Tabs value={value} onChange={handleChange} aria-label="tasks tab" style={{backgroundColor: '#e5e5e5'}}>
+          <Tab label="Unassigned tasks" className="Selected"/>
+          <Tab label="Assigned tasks" className="Selected"/>
+          <Tab label="All tasks" className="Selected"/>
         </Tabs>
     </div>
   );

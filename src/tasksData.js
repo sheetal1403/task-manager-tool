@@ -2,7 +2,7 @@ export const tasksData = [
     {
         id: 1,
         name: 'Task_name',
-        lob: 'Medicaid',
+        lob: 'Exchange',
         subtasks: 2,
         assigned: true,
         assignedTo: 'Derek Roberts',
@@ -12,9 +12,9 @@ export const tasksData = [
     {   
         id:2,
         name: 'Task_name',
-        lob: 'Medicaid',
+        lob: 'Commercial',
         subtasks: 2,
-        assigned: true,
+        assigned: false,
         assignedTo: 'Derek Roberts',
         step: 'Review',
         dueDate: (new Date(2020, 10, 1 )).toDateString()
@@ -22,7 +22,7 @@ export const tasksData = [
     {
         id:3,
         name: 'Task_name',
-        lob: 'Medicaid',
+        lob: 'Exchange',
         subtasks: 2,
         assigned: true,
         assignedTo: 'Derek Roberts',
@@ -32,7 +32,7 @@ export const tasksData = [
     {
         id:4,
         name: 'Task_name',
-        lob: 'Medicaid',
+        lob: 'Medicare',
         subtasks: 2,
         assigned: true,
         assignedTo: 'Derek Roberts',
@@ -44,7 +44,7 @@ export const tasksData = [
         name: 'Task_name',
         lob: 'Medicaid',
         subtasks: 2,
-        assigned: true,
+        assigned: false,
         assignedTo: 'Derek Roberts',
         step: 'Review',
         dueDate: (new Date(2020, 10, 1 )).toDateString()
@@ -52,7 +52,7 @@ export const tasksData = [
     {
         id:6,
         name: 'Task_name',
-        lob: 'Medicaid',
+        lob: 'Exchange',
         subtasks: 2,
         assigned: true,
         assignedTo: 'Derek Roberts',
@@ -64,7 +64,7 @@ export const tasksData = [
         name: 'Task_name',
         lob: 'Medicaid',
         subtasks: 2,
-        assigned: true,
+        assigned: false,
         assignedTo: 'Derek Roberts',
         step: 'Review',
         dueDate:(new Date(2020, 10, 1 )).toDateString()
@@ -72,7 +72,7 @@ export const tasksData = [
     {
         id:8,
         name: 'Task_name',
-        lob: 'Medicaid',
+        lob: 'Commercial',
         subtasks: 2,
         assigned: true,
         assignedTo: 'Derek Roberts',
