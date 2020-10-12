@@ -7,10 +7,9 @@ import { tasksData } from './tasksData';
 
 function App() {
 
-  const initialTasks = tasksData.filter(task => task.assigned === false);
-  const [tasks, setTasks] = useState(initialTasks);
+  const [tasks, setTasks] = useState(tasksData);
 
-  const [rowsPerPage, setRowsPerPage] = useState(3)
+  const [rowsPerPage, setRowsPerPage] = useState(5)
   const [page, setPage] = React.useState(0);
 
   const handleChangePage = (newPage) => {
@@ -47,7 +46,7 @@ function App() {
   } 
 
   return (
-    <div>
+    <div className="MainContainer">
       <TasksTab filterTasks={displayFilteredTasks}/>
       <PageControls 
         rowsPerPage={rowsPerPage} 

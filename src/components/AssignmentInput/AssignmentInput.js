@@ -12,6 +12,7 @@ function AssignmentInput(props) {
         {value:'Nicole Smith', label: 'Nicole Smith'},
         {value:'Derek Roberts', label: 'Derek Roberts'},
         {value:'Susan Miller', label: 'Susan Miller'},
+        {value: 'Unassigned', label: 'Unassigned'}
     ]
 
     const handleClick = () => {
@@ -25,6 +26,7 @@ function AssignmentInput(props) {
 
     const useStyles = {
         width: '100px',
+        container: styles => ({...styles}),
         placeholder: (styles) => ({...styles, fontSize: '10px'}),
         control: styles => ({...styles, borderRadius: '20px'}),
         menu: styles => ({...styles, margin: 0})
@@ -34,7 +36,6 @@ function AssignmentInput(props) {
             <div className="SelectContainer">
                 <Select 
                     autoFocus
-                    controlShouldRenderValue={false}
                     placeholder="Search for user"
                     value={value}
                     onChange={onSelectChange}

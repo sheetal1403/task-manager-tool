@@ -18,7 +18,7 @@ function PageControls(props) {
             <div className="Results">Results: {firstItem} to {lastItem} of {props.totalTasks}</div>
             <div className="RowsPerPage">Items per page <select name="rowsPerPage" onChange={handleChangeRowsPerPage}>
                     <option value="3">3</option>
-                    <option value="5">5</option>
+                    <option value="5" selected>5</option>
                     <option value="10">10</option>
                 </select></div>
              <ReactPaginate

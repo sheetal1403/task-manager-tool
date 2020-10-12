@@ -12,7 +12,8 @@
     position: absolute;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 10;
+    overflow: visible;
 }
 
 .Dropdown{
@@ -30,6 +31,10 @@
 
 .Dropdown p{
     margin: 0;
+}
+
+.Dropdown:active{
+    outline: none;
 }
 
 .react-select__control{

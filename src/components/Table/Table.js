@@ -5,7 +5,6 @@ import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
 import Checkbox from '@material-ui/core/Checkbox';
 import SortIcon from '@material-ui/icons/Sort';
 import './Table.css';
@@ -17,16 +16,10 @@ import AssignmentInput from '../AssignmentInput/AssignmentInput';
 export default function TasksTable(props) {
 
     const headerRows = ['TASK NAME', 'LOB', 'SUBTASKS', 'ASSIGNED TO', 'STEP', 'DUE DATE'];
-
-    
-
-    
-
-   
   
     return (
-      <div>
-        <TableContainer component={Paper}>
+      <div className="TableMainContainer">
+        <TableContainer>
         <Table aria-label="tasks table" className="Table">
           <TableHead>
             <TableRow>
@@ -45,14 +38,14 @@ export default function TasksTable(props) {
             {props.tasks.slice(props.page * props.rowsPerPage, props.page * props.rowsPerPage + props.rowsPerPage).map((row) => (
               
                  <TableRow key={row.id} className="TableRow">
-                    <TableCell align="center" className="TableCell"></TableCell>
+                    <TableCell align="center" className="TableCell EndCellLeft"></TableCell>
                     <TableCell align="center" className="TableCell"><Checkbox/></TableCell>
                     <TableCell align="left" className="TableCell">{row.name}</TableCell>
                     <TableCell align="center" className="TableCell"><Lob lob={row.lob}/></TableCell>
                     <TableCell align="center" className="TableCell">{row.subtasks}</TableCell>
                     <TableCell align="center" className="TableCell"><AssignmentInput assignedTo={row.assignedTo}/></TableCell>
                     <TableCell align="center" className="TableCell">{row.step}</TableCell>
-                    <TableCell align="center" className="TableCell">{row.dueDate}</TableCell>
+                    <TableCell align="center" className="TableCell EndCellRight">{row.dueDate}</TableCell>
               </TableRow> 
               
             ))}
