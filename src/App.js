@@ -2,12 +2,25 @@ import React, { useState } from 'react';
 import './App.css';
 import TasksTable from './components/Table/Table';
 import TasksTab from './components/TasksTab/TasksTab';
+import PageControls from './components/PageControls/PageControls';
 import { tasksData } from './tasksData';
 
 function App() {
 
   const initialTasks = tasksData.filter(task => task.assigned === false);
   const [tasks, setTasks] = useState(initialTasks);
+
+  const [rowsPerPage, setRowsPerPage] = useState(3)
+  const [page, setPage] = React.useState(0);
+
+  const handleChangePage = (newPage) => {
+        setPage(newPage.selected);
+      };
+
+  const handleChangeRowsPerPage = (rowsPerPage) => {
+        setRowsPerPage(parseInt(rowsPerPage, 10));
+        setPage(0);
+      };
 
   const displayFilteredTasks = (index) => {
 
@@ -36,7 +49,17 @@ function App() {
   return (
     <div>
       <TasksTab filterTasks={displayFilteredTasks}/>
-      <TasksTable tasks={tasks}/>
+      <PageControls 
+        rowsPerPage={rowsPerPage} 
+        page={page} 
+        totalTasks={tasks.length} 
+        handleChangePage={handleChangePage}
+        handleChangeRowsPerPage={handleChangeRowsPerPage}/>
+      <TasksTable 
+        tasks={tasks} 
+        rowsPerPage={rowsPerPage} 
+        page={page}  
+        />
     </div>
   );
 }

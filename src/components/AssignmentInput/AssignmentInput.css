@@ -1,0 +1,19 @@
+.Assign input{
+    padding: 5px;
+}
+
+.Assign{
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
+
+.SelectContainer{
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.Dropdown{
+    width: 100%;
+}
