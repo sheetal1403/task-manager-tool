@@ -15,7 +15,7 @@ export const tasksData = [
         lob: 'Commercial',
         subtasks: 2,
         assigned: false,
-        assignedTo: 'Derek Roberts',
+        assignedTo: 'Unassigned',
         step: 'Review',
         dueDate: (new Date(2020, 10, 1 )).toDateString()
     },
@@ -25,7 +25,7 @@ export const tasksData = [
         lob: 'Exchange',
         subtasks: 2,
         assigned: true,
-        assignedTo: 'Derek Roberts',
+        assignedTo: 'Nichole Smith',
         step: 'Review',
         dueDate: (new Date(2020, 10, 1 )).toDateString()
     },
@@ -45,7 +45,7 @@ export const tasksData = [
         lob: 'Medicaid',
         subtasks: 2,
         assigned: false,
-        assignedTo: 'Derek Roberts',
+        assignedTo: 'Unassigned',
         step: 'Review',
         dueDate: (new Date(2020, 10, 1 )).toDateString()
     },
@@ -55,7 +55,7 @@ export const tasksData = [
         lob: 'Exchange',
         subtasks: 2,
         assigned: true,
-        assignedTo: 'Derek Roberts',
+        assignedTo: 'Susan Miller',
         step: 'Review',
         dueDate:(new Date(2020, 10, 1 )).toDateString()
     },
@@ -65,7 +65,7 @@ export const tasksData = [
         lob: 'Medicaid',
         subtasks: 2,
         assigned: false,
-        assignedTo: 'Derek Roberts',
+        assignedTo: 'Unassigned',
         step: 'Review',
         dueDate:(new Date(2020, 10, 1 )).toDateString()
     },
@@ -75,7 +75,7 @@ export const tasksData = [
         lob: 'Commercial',
         subtasks: 2,
         assigned: true,
-        assignedTo: 'Derek Roberts',
+        assignedTo: 'Susan Miller',
         step: 'Review',
         dueDate: (new Date(2020, 10, 1 )).toDateString()
     },

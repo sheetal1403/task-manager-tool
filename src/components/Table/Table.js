@@ -50,7 +50,7 @@ export default function TasksTable(props) {
                     <TableCell align="left" className="TableCell">{row.name}</TableCell>
                     <TableCell align="center" className="TableCell"><Lob lob={row.lob}/></TableCell>
                     <TableCell align="center" className="TableCell">{row.subtasks}</TableCell>
-                    <TableCell align="center" className="TableCell"><AssignmentInput/></TableCell>
+                    <TableCell align="center" className="TableCell"><AssignmentInput assignedTo={row.assignedTo}/></TableCell>
                     <TableCell align="center" className="TableCell">{row.step}</TableCell>
                     <TableCell align="center" className="TableCell">{row.dueDate}</TableCell>
               </TableRow> 

@@ -12,8 +12,26 @@
     position: absolute;
     left: 0;
     right: 0;
+    z-index: 1;
 }
 
 .Dropdown{
     width: 100%;
+    background-color: white;
+    padding: 5px 7px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.Dropdown p{
+    margin: 0;
+}
+
+.react-select__control{
+    padding: 10px;
 }

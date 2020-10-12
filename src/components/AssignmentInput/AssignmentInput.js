@@ -1,16 +1,17 @@
 import React, { useState } from 'react'
 import Select from 'react-select';
 import './AssignmentInput.css';
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
-function AssignmentInput() {
+function AssignmentInput(props) {
 
-    const [value, setvalue] = useState('Unassigned')
+    const [value, setvalue] = useState(props.assignedTo);
     const [isOpen, setIsOpen] = useState(false);
 
     const options = [
-        {value:'1', label: 'Item 1'},
-        {value:'2', label: 'Item 2'},
-        {value:'3', label: 'Item 3'},
+        {value:'Nicole Smith', label: 'Nicole Smith'},
+        {value:'Derek Roberts', label: 'Derek Roberts'},
+        {value:'Susan Miller', label: 'Susan Miller'},
     ]
 
     const handleClick = () => {
@@ -18,13 +19,15 @@ function AssignmentInput() {
     }
 
     const onSelectChange = (data) => {
-        console.log(data.label)
         setvalue(data.label)
         setIsOpen(false)
     }
 
     const useStyles = {
-        width: '100px'
+        width: '100px',
+        placeholder: (styles) => ({...styles, fontSize: '10px'}),
+        control: styles => ({...styles, borderRadius: '20px'}),
+        menu: styles => ({...styles, margin: 0})
     }
     
     let menu = (isOpen && 
@@ -32,7 +35,7 @@ function AssignmentInput() {
                 <Select 
                     autoFocus
                     controlShouldRenderValue={false}
-                    placeholder="Search..."
+                    placeholder="Search for user"
                     value={value}
                     onChange={onSelectChange}
                     options={options}
@@ -45,14 +48,7 @@ function AssignmentInput() {
         
 
         <div className="Assign">
-            {/* <Select options={[
-                {value:'1', label: 'Item 1'},
-                {value:'2', label: 'Item 2'},
-                {value:'3', label: 'Item 3'},
-                ]} val>
-                
-            </Select> */}
-            <button onClick={handleClick} className="Dropdown">{value}</button>
+            <button onClick={handleClick} className="Dropdown"><p>{value}</p><ArrowDropDownIcon/></button>
             {menu}
 
         </div>
