@@ -20,5 +20,19 @@
     padding: 7px;
 }
 
+.HeaderCell{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px;
+    color: gray;
+}
+
+.IconImage{
+    height: 25px
+}
+
 
 
